@@ -1,0 +1,192 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Permanent+Marker&display=swap');
+
+
+html {
+    font-family: Comfortaa;
+}
+
+html #globalbar{
+    position: absolute fixed;
+}
+
+.mainnav {
+    
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: saturate(180%) blur(20px);
+    width: 100%;
+    min-width: 1024px;
+    height: 48px;
+    margin: 0;
+    box-sizing: content-box;
+    padding: 0;
+    letter-spacing: normal;
+    font-weight: normal;
+    vertical-align: text-bottom;
+    
+}
+
+.ull {
+    color: white;
+    list-style: none;
+    text-align: center;
+    align-items: center;
+    font-size: 1em;
+    width: auto;
+    margin: 0%;
+    vertical-align: middle;
+}
+
+.lli{
+    display: inline-flex;
+    padding-left: 10px;
+    padding-right: 10px;
+    
+    color: rgb(153, 151, 151);
+    vertical-align: middle;
+    transition: color .2s;
+    transition: font-size .2s, color .2s;
+    text-align: center;
+
+    line-height: 48px;
+    height: 48px;
+    
+    
+    
+    
+
+}
+
+.llimg {
+    display: inline-flex;
+    padding-left: 10px;
+    padding-right: 10px;
+    
+    color: rgb(153, 151, 151);
+    vertical-align: middle;
+    text-align: center;
+    filter: grayscale(100%);
+    line-height: 48px;
+    height: 48px;
+    transition: filter;
+}
+
+.llimg:hover {
+    filter: grayscale(0%);
+}
+
+.navimg {
+    height: 35px;
+    display: flex;
+    padding-top: auto;
+    vertical-align: middle;
+    line-height: 48px;
+}
+
+.lli:hover{
+    color: white;
+    font-size: 15pt;
+    cursor: pointer;
+}
+
+.lli:hover .navpopup {
+    display: flex;
+}
+
+.navelem {
+    direction: ltr;
+    display: flex;
+    justify-content: center;
+    text-align: inherit;
+    position: sticky;
+    top: 0px;
+    margin: 0 auto;
+    max-width: 980px;
+    height: 48px;
+    max-height: 44px;    
+    vertical-align: middle;
+}
+
+.menuitem {
+    display: inline-block;
+}
+
+
+.mainfoot {
+    position: absolute;
+    display: block;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: saturate(180%) blur(20px);
+    width: 100%;
+    min-width: 1024px;
+    height: 48px;
+    margin: 0;
+    box-sizing: content-box;
+    padding: 0;
+    letter-spacing: normal;
+    font-weight: normal;
+    bottom: 0px;
+    left: 0px;
+}
+
+.mainfoot > ul {
+    list-style: none;
+    display: inline-block;
+}
+
+.mainfoot > ul > li > a > img {
+    height: 40px;
+    
+}
+
+.sectit {
+    text-align: center;
+    font-size: 40pt;
+    
+}
+
+.und_anim {
+    background-image: url("\\assets\\greenhouse_smallogo_square.png");
+    background-size: cover;
+    background-position: 0%;
+    color: darkgreen;
+    transition: font-size .4s;
+}
+
+.und_anim:hover {
+    
+    font-size: 45pt;
+    
+    
+}
+
+.maincon {
+    position: relative;
+    top: 48px;
+    height: 10000px;
+    
+    
+    
+}
+
+
+.motto {
+    background-color: rgba(0, 0, 0, 0.2);
+    background-size: cover;
+}
+
+.popup {
+    display: none;
+    width: 100%;
+    height: 60%;
+    background-color: black;
+}
+
+.popup:hover {
+    display: flex;
+}
