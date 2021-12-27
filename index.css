@@ -2,13 +2,21 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Permanent+Marker&display=swap');
 
-
+:root {
+    --bcolor: rgb(41, 41, 41);
+    --dcolor: rgba(153, 205, 50, 0.438);
+}
 html {
     font-family: Comfortaa;
 }
 
+body {
+    margin: 0px;
+    top: 48px;
+}
+
 html #globalbar{
-    position: absolute fixed;
+    position: absolute;
 }
 
 .mainnav {
@@ -40,6 +48,29 @@ html #globalbar{
     width: auto;
     margin: 0%;
     vertical-align: middle;
+    display: flex;
+    position: relative;
+}
+
+.ulli {
+    top: 0px;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: saturate(180%) blur(20px);
+    list-style: none;
+    text-align: center;
+    align-items: center;
+    font-size: 1em;
+    width: 100%;
+    margin: 0%;
+    vertical-align: middle;
+    justify-content: center;
+    position: fixed;
+    padding: 0px;
+}
+
+.ulli > li .ulli > li > a {
+    display: block;
 }
 
 .lli{
@@ -66,14 +97,16 @@ html #globalbar{
     display: inline-flex;
     padding-left: 10px;
     padding-right: 10px;
-    
+    float: left;
+    align-content: center;
+    align-items: center;
     color: rgb(153, 151, 151);
     vertical-align: middle;
     text-align: center;
     filter: grayscale(100%);
     line-height: 48px;
     height: 48px;
-    transition: filter;
+    transition: filter .8s;
 }
 
 .llimg:hover {
@@ -81,11 +114,11 @@ html #globalbar{
 }
 
 .navimg {
-    height: 35px;
+    height: 80%;
     display: flex;
-    padding-top: auto;
-    vertical-align: middle;
-    line-height: 48px;
+    
+    
+    
 }
 
 .lli:hover{
@@ -118,8 +151,8 @@ html #globalbar{
 
 
 .mainfoot {
-    position: absolute;
-    display: block;
+    position: fixed;
+    display: flex;
     background-color: rgba(0, 0, 0, 0.8);
     backdrop-filter: saturate(180%) blur(20px);
     width: 100%;
@@ -132,6 +165,8 @@ html #globalbar{
     font-weight: normal;
     bottom: 0px;
     left: 0px;
+    align-content: center;
+    align-items: center;
 }
 
 .mainfoot > ul {
@@ -168,16 +203,51 @@ html #globalbar{
 .maincon {
     position: relative;
     top: 48px;
-    height: 10000px;
-    
+    bottom: 48px;
+    background-image: url("assets\\waterfall.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-clip: content-box;
+    background-origin: content-box;
+    display: flex;
+    flex-direction: column;
     
     
 }
 
 
-.motto {
-    background-color: rgba(0, 0, 0, 0.2);
-    background-size: cover;
+.mottor {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    margin: 3vw;
+    
+}
+
+.mottor > div > p {
+    text-align: end;
+    max-width: 35vw;
+    backdrop-filter: blur(20px);
+    border-radius: 1vw;
+    color: whitesmoke;
+    
+}
+
+.mottol {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    margin: 3vw;
+    
+}
+
+.mottol > div > p {
+    color: whitesmoke;
+    text-align: start;
+    max-width: 35vw;
+    backdrop-filter: blur(20px);
+    border-radius: 1vw;
+    
 }
 
 .popup {
@@ -189,4 +259,20 @@ html #globalbar{
 
 .popup:hover {
     display: flex;
+}
+
+.mottocon {
+    display: inherit;
+    text-align: inherit;
+    flex-direction: inherit;
+    align-items: inherit;
+    backdrop-filter: blur(20px);
+    padding: 10px;
+    border-radius: 20px;
+    
+}
+
+.mottocon > h2 {
+    margin: 0px;
+    color: var(--dcolor);
 }
