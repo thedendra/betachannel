@@ -204,11 +204,7 @@ html #globalbar{
     position: relative;
     top: 48px;
     bottom: 48px;
-    background-image: url("assets\\waterfall.jpg");
-    background-attachment: fixed;
-    background-size: cover;
-    background-clip: content-box;
-    background-origin: content-box;
+    
     display: flex;
     flex-direction: column;
     
@@ -220,7 +216,7 @@ html #globalbar{
     display: flex;
     align-items: flex-end;
     flex-direction: column;
-    margin: 3vw;
+    padding: 10vw 3vw 10vw 3vw;
     
 }
 
@@ -237,7 +233,7 @@ html #globalbar{
     display: flex;
     align-items: flex-start;
     flex-direction: column;
-    margin: 3vw;
+    padding: 10vw 3vw 10vw 3vw;
     
 }
 
@@ -275,4 +271,34 @@ html #globalbar{
 .mottocon > h2 {
     margin: 0px;
     color: var(--dcolor);
+}
+
+.perfect {
+    background-image: url("assets\\leather.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.ecolo {
+    background-image: url("assets\\waterfall.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.respons {
+    background-image: url("assets\\house.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.stabil {
+    background-image: url("assets\\server.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.secur {
+    background-image: url("assets\\bluetux_right.png");
+    background-size: cover;
+    background-attachment: fixed;
 }
