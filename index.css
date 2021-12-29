@@ -10,6 +10,9 @@
 	--par-fsz: 1vmax;
 	--hea-fsz: 1.5vmax;
 
+    --hea-fsz-mob: 1.5vmin
+    --par-fsz-mob: 1vmin;
+
     --mob-menu-txt-pad: 0px;
 }
 html {
@@ -19,6 +22,8 @@ html {
 body {
     margin: 0px;
     top: 48px;
+    display: flex;
+    flex-direction: column;
 }
 
 html #globalbar{
@@ -253,22 +258,20 @@ html #globalbar{
 
 
 .mainfoot {
-    position: fixed;
+    position: relative;
     display: flex;
     background-color: rgba(0, 0, 0, 0.8);
     backdrop-filter: saturate(180%) blur(20px);
     width: 100%;
-    min-width: 1024px;
-    height: 48px;
+    
+    height: 50vh;
     margin: 0;
-    box-sizing: content-box;
+    
     padding: 0;
-    letter-spacing: normal;
-    font-weight: normal;
-    bottom: 0px;
-    left: 0px;
-    align-content: center;
-    align-items: center;
+    
+    
+    
+    
 }
 
 .mainfoot > ul {
@@ -350,6 +353,24 @@ html #globalbar{
     
 }
 
+.mottocen {
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    padding: 10vw 3vw 10vw 3vw;
+    
+}
+
+.mottocen > div > p {
+    text-align: justify;
+    max-width: 90vw;
+    backdrop-filter: blur(20px);
+    border-radius: 10vw;
+    color: whitesmoke;
+	font-size: var(--par-fsz);
+    
+}
+
 .popup {
     display: none;
     width: 100%;
@@ -422,7 +443,7 @@ html #globalbar{
 
 
 
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 768px) {
     .ulli {
         display: none;
     }
