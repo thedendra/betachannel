@@ -9,6 +9,8 @@
 	--nav-height: 6vmin;
 	--par-fsz: 1vmax;
 	--hea-fsz: 1.5vmax;
+
+    --mob-menu-txt-pad: 0px;
 }
 html {
     font-family: Comfortaa;
@@ -102,12 +104,33 @@ html #globalbar{
 #mobshwn {
     display: none;
     position: fixed;
-    
+    margin: 0px;
     width: 100%;
     top: 5vh;
     background-color: rgba(0, 0, 0, 0.8);
     backdrop-filter: saturate(180%) blur(20px);
+    padding: 0px;
+    flex-direction: column;
+    list-style-type: none;
+
+    align-items: center;
     
+}
+
+.txtt {
+    
+    animation-fill-mode: both;
+    color: rgb(153, 151, 151);
+}
+
+.txtt .moblli {
+    display: flex;
+    animation: mobmenutxtin .4s forwards;
+}
+
+[id*="xtxt"] {
+    display: none;
+
 }
 
 .lli{
@@ -399,7 +422,7 @@ html #globalbar{
 
 
 
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 650px) {
     .ulli {
         display: none;
     }
@@ -431,5 +454,33 @@ html #globalbar{
 
     100% {
         display: none;
+    }
+}
+
+@keyframes mobmenutxtin {
+    0% {
+        padding-top: 0vmax;
+        color: rgba(153, 151, 151, 0);
+        font-size: 1vmax;
+    }
+
+    100% {
+        padding-top: var(--mob-menu-txt-pad);
+        color: rgba(153, 151, 151, 1);
+        font-size: 4vmax;
+    }
+}
+
+@keyframes mobmenutxtout {
+    0% {
+        padding-top: var(--mob-menu-txt-pad);
+        color: rgba(153, 151, 151, 1);
+        font-size: 4vmax;
+    }
+
+    100% {
+        padding-top: 0px;
+        color: rgba(153, 151, 151, 0);
+        font-size: 1vmax;
     }
 }
