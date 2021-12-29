@@ -5,6 +5,10 @@
 :root {
     --bcolor: rgb(41, 41, 41);
     --dcolor: rgba(153, 205, 50, 0.438);
+
+	--nav-height: 6vmin;
+	--par-fsz: 1vmax;
+	--hea-fsz: 1.5vmax;
 }
 html {
     font-family: Comfortaa;
@@ -63,6 +67,7 @@ html #globalbar{
     font-size: 1em;
     width: 100%;
     margin: 0%;
+	height: var(--nav-height);
     vertical-align: middle;
     justify-content: center;
     position: fixed;
@@ -73,10 +78,42 @@ html #globalbar{
     display: block;
 }
 
+.ullimob {
+    top: 0px;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: saturate(180%) blur(20px);
+    list-style: none;
+    align-items: center;
+    font-size: 1em;
+    width: 100%;
+    margin: 0%;
+    vertical-align: middle;
+    justify-content: space-evenly;
+    position: fixed;
+    padding: 0px;
+    height: 5vh;
+}
+
+.menuicon {
+	justify-self: left;
+}
+
+#mobshwn {
+    display: none;
+    position: fixed;
+    
+    width: 100%;
+    top: 5vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: saturate(180%) blur(20px);
+    
+}
+
 .lli{
     display: inline-flex;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 1vmin;
+    padding-right: 1vmin;
     
     color: rgb(153, 151, 151);
     vertical-align: middle;
@@ -84,14 +121,36 @@ html #globalbar{
     transition: font-size .2s, color .2s;
     text-align: center;
 
-    line-height: 48px;
-    height: 48px;
+    line-height: (var(--nav-height) - 1vmin);
+    height: (var(--nav-height) - 1vmin);
+    font-size: 1.7vmin;
     
     
     
     
 
 }
+
+.llimob {
+	display: inline-flex;
+    padding-left: 1vmin;
+    padding-right: 1vmin;
+    /*margin-right: auto;*/
+    color: rgb(153, 151, 151);
+    justify-self: center;
+    transition: color .2s;
+    transition: font-size .2s, color .2s;
+    text-align: center;
+
+    line-height: (var(--nav-height) - 1vmin);
+    height: (var(--nav-height) - 1vmin);
+    font-size: 1.7vmax;
+}
+
+/*.llimob:hover {
+	color: var(--dcolor);
+	font-size: 2vmax;
+}*/
 
 .llimg {
     display: inline-flex;
@@ -104,8 +163,8 @@ html #globalbar{
     vertical-align: middle;
     text-align: center;
     filter: grayscale(100%);
-    line-height: 48px;
-    height: 48px;
+    line-height: 5vmin;
+    height: 5vmin;
     transition: filter .8s;
 }
 
@@ -113,8 +172,28 @@ html #globalbar{
     filter: grayscale(0%);
 }
 
+.llimgmob {
+    display: inherit;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-right: auto;
+    align-content: center;
+    align-items: center;
+    color: rgb(153, 151, 151);
+    vertical-align: middle;
+    text-align: center;
+    
+    line-height: 5vh;
+    height: 4vh;
+    transition: filter .8s;
+}
+
+.menumob {
+	opacity: 43%;
+}
+
 .navimg {
-    height: 80%;
+    height: 4vmin;
     display: flex;
     
     
@@ -123,7 +202,7 @@ html #globalbar{
 
 .lli:hover{
     color: white;
-    font-size: 15pt;
+    font-size: 2vmin;
     cursor: pointer;
 }
 
@@ -202,8 +281,8 @@ html #globalbar{
 
 .maincon {
     position: relative;
-    top: 48px;
-    bottom: 48px;
+    top: var(--nav-height);
+    bottom: 5vmin;
     
     display: flex;
     flex-direction: column;
@@ -226,6 +305,7 @@ html #globalbar{
     backdrop-filter: blur(20px);
     border-radius: 1vw;
     color: whitesmoke;
+	font-size: var(--par-fsz);
     
 }
 
@@ -243,6 +323,7 @@ html #globalbar{
     max-width: 35vw;
     backdrop-filter: blur(20px);
     border-radius: 1vw;
+	font-size: var(--par-fsz);
     
 }
 
@@ -265,12 +346,25 @@ html #globalbar{
     backdrop-filter: blur(20px);
     padding: 10px;
     border-radius: 20px;
+	
     
 }
 
 .mottocon > h2 {
     margin: 0px;
     color: var(--dcolor);
+	font-size: var(--hea-fsz);
+}
+
+.mottocon:hover .mottopar {
+	font-size: var(--hea-fsz);
+	max-width: 50vw;
+	
+}
+
+.mottopar {
+	
+	transition: font-size .4s, max-width .4s;
 }
 
 .perfect {
@@ -301,4 +395,41 @@ html #globalbar{
     background-image: url("assets\\bluetux_right.png");
     background-size: cover;
     background-attachment: fixed;
+}
+
+
+
+@media only screen and (max-width: 550px) {
+    .ulli {
+        display: none;
+    }
+
+    .ullimob {
+        display: flex;
+    }
+    
+}
+
+@keyframes mobmenuin {
+    0% {
+        height: 0vh;
+    }
+
+    100% {
+        height: 95vh;
+    }
+}
+
+@keyframes mobmenuout {
+    0% {
+        height: 95vh;
+    }
+
+    99% {
+        height: 0vh;
+    }
+
+    100% {
+        display: none;
+    }
 }
