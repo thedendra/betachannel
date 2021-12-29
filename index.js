@@ -1,3 +1,8 @@
+function homepage()
+{
+    window.location.href = "https://thedendra.github.io"
+}
+
 function shwmbbar()
 {
     document.getElementById("mobshwn").style.display = "flex";
@@ -99,6 +104,7 @@ function cenpar()
     var toCenr = document.querySelectorAll(".mottor");
     var toCenl = document.querySelectorAll(".mottol");
     var noAnim = document.querySelectorAll(".mottopar");
+    var noMagn = document.querySelectorAll(".mottocon");
     
     for(var i = 0; i < toCenr.length; i++)
     {
@@ -112,12 +118,18 @@ function cenpar()
         toCenl[i].classList.remove("mottol");
     }
 
-    for(var i = 0; i < toCenl.length; i++)
+    for(var i = 0; i < noAnim.length; i++)
     {
         noAnim[i].classList.add("provv");
         noAnim[i].classList.remove("mottopar");
     }
     
+    for(var i = 0; i < noMagn.length; i++)
+    {
+        noMagn[i].classList.add("mottoconst");
+        noMagn[i].classList.remove("mottocon");
+    }
+
     return toCenl.length;
 }
 
@@ -125,6 +137,7 @@ function setpar()
 {
     var toSet = document.querySelectorAll(".mottocen");
     var toAnim = document.querySelectorAll(".provv");
+    var toMagn = document.querySelectorAll(".mottoconst");
 
     for(let i = 0; i < toSet.length; i++)
     {
@@ -144,6 +157,12 @@ function setpar()
     {
         toAnim[i].classList.add("mottopar");
         toAnim[i].classList.remove("provv");
+    }
+
+    for(var i = 0; i < toMagn.length; i++)
+    {
+        toMagn[i].classList.add("mottocon");
+        toMagn[i].classList.remove("mottoconst");
     }
     
 }

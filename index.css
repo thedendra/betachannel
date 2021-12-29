@@ -406,6 +406,24 @@ html #globalbar{
 	
 }
 
+.mottoconst {
+    display: inherit;
+    text-align: inherit;
+    flex-direction: inherit;
+    align-items: inherit;
+    backdrop-filter: blur(20px);
+    padding: 10px;
+    border-radius: 20px;
+	
+    
+}
+
+.mottoconst > h2 {
+    margin: 0px;
+    color: var(--dcolor);
+	font-size: var(--hea-fsz);
+}
+
 .mottopar {
 	
 	transition: font-size .4s, max-width .4s;
