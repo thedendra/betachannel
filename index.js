@@ -83,6 +83,7 @@ function mobmenutxtpad(Fsize)
 
 function cenpar()
 {
+    document.getElementById("maincon").style.top = '5vh';
     var toCenr = document.querySelectorAll(".mottor");
     var toCenl = document.querySelectorAll(".mottol");
     var noAnim = document.querySelectorAll(".mottopar");
@@ -117,6 +118,7 @@ function cenpar()
 
 function setpar()
 {
+    document.getElementById("maincon").style.top = '6vmin';
     var toSet = document.querySelectorAll(".mottocen");
     var toAnim = document.querySelectorAll(".provv");
     var toMagn = document.querySelectorAll(".mottoconst");
@@ -165,4 +167,3 @@ function sizeList(e)
 
 mediaQuery.addListener(sizeList);
 
-sizeList(mediaQuery);
