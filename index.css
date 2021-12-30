@@ -11,10 +11,11 @@
 	--hea-fsz: 1.5vmax;
 
     --hea-fsz-mob: 1.5vmin
-    --par-fsz-mob: 1vmin;
+    --par-fsz-mob: 0.7vmin;
 
     --mob-menu-txt-pad: 0px;
 }
+
 html {
     font-family: Comfortaa;
 }
@@ -28,39 +29,6 @@ body {
 
 html #globalbar{
     position: absolute;
-}
-
-.mainnav {
-    
-    top: 0px;
-    left: 0px;
-    position: absolute;
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.8);
-    backdrop-filter: saturate(180%) blur(20px);
-    width: 100%;
-    min-width: 1024px;
-    height: 48px;
-    margin: 0;
-    box-sizing: content-box;
-    padding: 0;
-    letter-spacing: normal;
-    font-weight: normal;
-    vertical-align: text-bottom;
-    
-}
-
-.ull {
-    color: white;
-    list-style: none;
-    text-align: center;
-    align-items: center;
-    font-size: 1em;
-    width: auto;
-    margin: 0%;
-    vertical-align: middle;
-    display: flex;
-    position: relative;
 }
 
 .ulli {
@@ -81,10 +49,6 @@ html #globalbar{
     padding: 0px;
 }
 
-.ulli > li .ulli > li > a {
-    display: block;
-}
-
 .ullimob {
     top: 0px;
     display: none;
@@ -100,10 +64,6 @@ html #globalbar{
     position: fixed;
     padding: 0px;
     height: 5vh;
-}
-
-.menuicon {
-	justify-self: left;
 }
 
 #mobshwn {
@@ -126,11 +86,6 @@ html #globalbar{
     
     animation-fill-mode: both;
     color: rgb(153, 151, 151);
-}
-
-.txtt .moblli {
-    display: flex;
-    animation: mobmenutxtin .4s forwards;
 }
 
 [id*="xtxt"] {
@@ -175,11 +130,6 @@ html #globalbar{
     font-size: 1.7vmax;
 }
 
-/*.llimob:hover {
-	color: var(--dcolor);
-	font-size: 2vmax;
-}*/
-
 .llimg {
     display: inline-flex;
     padding-left: 10px;
@@ -200,26 +150,6 @@ html #globalbar{
     filter: grayscale(0%);
 }
 
-.llimgmob {
-    display: inherit;
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-right: auto;
-    align-content: center;
-    align-items: center;
-    color: rgb(153, 151, 151);
-    vertical-align: middle;
-    text-align: center;
-    
-    line-height: 5vh;
-    height: 4vh;
-    transition: filter .8s;
-}
-
-.menumob {
-	opacity: 43%;
-}
-
 .navimg {
     height: 4vmin;
     display: flex;
@@ -233,29 +163,6 @@ html #globalbar{
     font-size: 2vmin;
     cursor: pointer;
 }
-
-.lli:hover .navpopup {
-    display: flex;
-}
-
-.navelem {
-    direction: ltr;
-    display: flex;
-    justify-content: center;
-    text-align: inherit;
-    position: sticky;
-    top: 0px;
-    margin: 0 auto;
-    max-width: 980px;
-    height: 48px;
-    max-height: 44px;    
-    vertical-align: middle;
-}
-
-.menuitem {
-    display: inline-block;
-}
-
 
 .mainfoot {
     position: relative;
@@ -284,27 +191,6 @@ html #globalbar{
     
 }
 
-.sectit {
-    text-align: center;
-    font-size: 40pt;
-    
-}
-
-.und_anim {
-    background-image: url("\\assets\\greenhouse_smallogo_square.png");
-    background-size: cover;
-    background-position: 0%;
-    color: darkgreen;
-    transition: font-size .4s;
-}
-
-.und_anim:hover {
-    
-    font-size: 45pt;
-    
-    
-}
-
 .maincon {
     position: relative;
     top: var(--nav-height);
@@ -315,7 +201,6 @@ html #globalbar{
     
     
 }
-
 
 .mottor {
     display: flex;
@@ -330,7 +215,7 @@ html #globalbar{
     max-width: 35vw;
     backdrop-filter: blur(20px);
     border-radius: 1vw;
-    color: whitesmoke;
+    color: rgba(245, 245, 245, 0.5);
 	font-size: var(--par-fsz);
     
 }
@@ -344,7 +229,7 @@ html #globalbar{
 }
 
 .mottol > div > p {
-    color: whitesmoke;
+    color: rgba(245, 245, 245, 0.5);
     text-align: start;
     max-width: 35vw;
     backdrop-filter: blur(20px);
@@ -357,7 +242,7 @@ html #globalbar{
     display: flex;
     align-items: stretch;
     flex-direction: column;
-    padding: 10vw 3vw 10vw 3vw;
+    padding: 40vw 3vw 10vw 3vw;
     
 }
 
@@ -366,20 +251,9 @@ html #globalbar{
     max-width: 90vw;
     backdrop-filter: blur(20px);
     border-radius: 10vw;
-    color: whitesmoke;
-	font-size: var(--par-fsz);
+    color: rgba(245, 245, 245, 0.5);
+	font-size: var(--par-fsz-mob);
     
-}
-
-.popup {
-    display: none;
-    width: 100%;
-    height: 60%;
-    background-color: black;
-}
-
-.popup:hover {
-    display: flex;
 }
 
 .mottocon {
@@ -388,7 +262,7 @@ html #globalbar{
     flex-direction: inherit;
     align-items: inherit;
     backdrop-filter: blur(20px);
-    padding: 10px;
+    padding: 3vmin;
     border-radius: 20px;
 	
     
@@ -412,7 +286,7 @@ html #globalbar{
     flex-direction: inherit;
     align-items: inherit;
     backdrop-filter: blur(20px);
-    padding: 10px;
+    padding: 3vmax;
     border-radius: 20px;
 	
     
@@ -421,7 +295,7 @@ html #globalbar{
 .mottoconst > h2 {
     margin: 0px;
     color: var(--dcolor);
-	font-size: var(--hea-fsz);
+	font-size: var(--hea-fsz-mob);
 }
 
 .mottopar {
@@ -458,8 +332,6 @@ html #globalbar{
     background-size: cover;
     background-attachment: fixed;
 }
-
-
 
 @media only screen and (max-width: 768px) {
     .ulli {
@@ -523,3 +395,141 @@ html #globalbar{
         font-size: 1vmax;
     }
 }
+
+
+
+
+
+
+/*
+    |||||    ||||||||  |||||   |||||   ||||||||    ||||||     ||     ||||||||  ||||||||  |||||
+    ||  ||   ||        ||  ||  ||  ||  ||         |||       ||  ||      ||     ||        ||  ||
+    ||   ||  ||||      |||||   |||||   ||||      ||        ||    ||     ||     ||||      ||   ||
+    ||  ||   ||        ||      || ||   ||         |||      ||||||||     ||     ||        ||  ||
+    |||||    ||||||||  ||      ||  ||  ||||||||    ||||||  ||    ||     ||     ||||||||  |||||
+*/
+
+/*.mainnav {
+    
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: saturate(180%) blur(20px);
+    width: 100%;
+    min-width: 1024px;
+    height: 48px;
+    margin: 0;
+    box-sizing: content-box;
+    padding: 0;
+    letter-spacing: normal;
+    font-weight: normal;
+    vertical-align: text-bottom;
+    
+}*/
+
+/*.ull {
+    color: white;
+    list-style: none;
+    text-align: center;
+    align-items: center;
+    font-size: 1em;
+    width: auto;
+    margin: 0%;
+    vertical-align: middle;
+    display: flex;
+    position: relative;
+}*/
+
+/*.ulli > li .ulli > li > a {
+    display: block;
+}*/
+
+/*.menuicon {
+	justify-self: left;
+}*/
+
+/*.txtt .moblli {
+    display: flex;
+    animation: mobmenutxtin .4s forwards;
+}*/
+
+/*.llimob:hover {
+	color: var(--dcolor);
+	font-size: 2vmax;
+}*/
+
+/*.llimgmob {
+    display: inherit;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-right: auto;
+    align-content: center;
+    align-items: center;
+    color: rgb(153, 151, 151);
+    vertical-align: middle;
+    text-align: center;
+    
+    line-height: 5vh;
+    height: 4vh;
+    transition: filter .8s;
+}*/
+
+/*.menumob {
+	opacity: 43%;
+}*/
+
+/*.lli:hover .navpopup {
+    display: flex;
+}*/
+
+/*.navelem {
+    direction: ltr;
+    display: flex;
+    justify-content: center;
+    text-align: inherit;
+    position: sticky;
+    top: 0px;
+    margin: 0 auto;
+    max-width: 980px;
+    height: 48px;
+    max-height: 44px;    
+    vertical-align: middle;
+}*/
+
+/*.menuitem {
+    display: inline-block;
+}*/
+
+/*.sectit {
+    text-align: center;
+    font-size: 40pt;
+    
+}*/
+
+/*.und_anim {
+    background-image: url("\\assets\\greenhouse_smallogo_square.png");
+    background-size: cover;
+    background-position: 0%;
+    color: darkgreen;
+    transition: font-size .4s;
+}*/
+
+/*.und_anim:hover {
+    
+    font-size: 45pt;
+    
+    
+}*/
+
+/*.popup {
+    display: none;
+    width: 100%;
+    height: 60%;
+    background-color: black;
+}*/
+
+/*.popup:hover {
+    display: flex;
+}*/
