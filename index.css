@@ -333,7 +333,7 @@ html #globalbar{
     background-attachment: fixed;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
     .ulli {
         display: none;
     }
