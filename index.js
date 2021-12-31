@@ -167,3 +167,30 @@ function sizeList(e)
 
 mediaQuery.addListener(sizeList);
 
+function cookieCheat(action)
+{
+    if(action == "show")
+    {
+        if(localStorage.getItem("cookieCheat_ald") == '0')
+        {
+            document.getElementById("cookies").style.display = "flex";
+            
+            localStorage.setItem("cookieCheat_ald", 1);
+        }
+    }
+    else if(action == "hide")
+    {
+        document.getElementById("cookies").style.animation = "cookieout .4s forwards";
+        setTimeout(() => {  
+            document.getElementById("cookhea").style.display = "none";
+            document.getElementById("cookpar").style.display = "none";
+            document.getElementById("cookbut").style.display = "none"; }, 350);
+        setTimeout(() => { document.getElementById("cookies").style.display = "none"; }, 400);
+        localStorage.setItem("cookieCheat_ald", 0);
+    }
+    else
+    {
+
+    }
+}
+

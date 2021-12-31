@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <script src="index.js"></script>
-        <link rel="stylesheet" onload="sizeList(mediaQuery)" href="index.css">
+        <link rel="stylesheet" onload="sizeList(mediaQuery), cookieCheat('show')" href="index.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
         <meta charset="UTF-8">
@@ -96,7 +96,11 @@
             </li>
         </ul>
 
-
+        <div id="cookies">
+            <h1 class="cook cookhea" id="cookhea">We don't use third parts cookies.</h1>
+            <p class="cook cookpar" id="cookpar">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <button id="cookbut" onclick="cookieCheat('hide')">I understood</button>
+        </div>
         
     </body>
 </html>
