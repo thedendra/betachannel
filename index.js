@@ -171,7 +171,8 @@ function cookieCheat(action)
 {
     if(action == "show")
     {
-        if(localStorage.getItem("cookieCheat_ald") == '0')
+        console.log(localStorage.getItem("cookieCheat_ald"))
+        if(localStorage.getItem("cookieCheat_ald") == '0' || localStorage.getItem("cookieCheat_ald") == null)
         {
             document.getElementById("cookies").style.display = "flex";
             
@@ -186,7 +187,7 @@ function cookieCheat(action)
             document.getElementById("cookpar").style.display = "none";
             document.getElementById("cookbut").style.display = "none"; }, 350);
         setTimeout(() => { document.getElementById("cookies").style.display = "none"; }, 400);
-        localStorage.setItem("cookieCheat_ald", 0);
+        localStorage.clear("cookieCheat_ald");
     }
     else
     {
