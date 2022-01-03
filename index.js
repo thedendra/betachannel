@@ -14,7 +14,7 @@ function hdmbbar()
 {
     
     document.getElementById("mobshwn").style.animation = "mobmenuout .4s both";
-    document.getElementById("mobmenush").setAttribute('onclick', 'shwmbbar(), shwmbbartxt()');
+    document.getElementById("mobmenush").setAttribute('onclick', 'shwmbbar(), shwmbbartxt(), mobmenutxtpad(4)');
 }
 
 function shwmbbartxt()
@@ -74,7 +74,7 @@ function mobmenutxtpad(Fsize)
     var Lnum = document.getElementsByClassName("txtt").length;
 
     var res = (95 - (Lnum * Fsize)) / (Lnum + 1);
-    var pad = res + 'vmax';
+    var pad = res + 'vh';
 
     rot.style.setProperty('--mob-menu-txt-pad', pad);
     

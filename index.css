@@ -86,6 +86,7 @@ html #globalbar{
     
     animation-fill-mode: both;
     color: rgb(153, 151, 151);
+    
 }
 
 [id*="xtxt"] {
@@ -374,6 +375,7 @@ html #globalbar{
 
 .cookhea {
     color: var(--dcolor);
+    text-align: start;
 }
 
 .cookpar {
@@ -440,7 +442,7 @@ html #globalbar{
     100% {
         padding-top: var(--mob-menu-txt-pad);
         color: rgba(153, 151, 151, 1);
-        font-size: 4vmax;
+        font-size: 4vh;
     }
 }
 
@@ -448,7 +450,7 @@ html #globalbar{
     0% {
         padding-top: var(--mob-menu-txt-pad);
         color: rgba(153, 151, 151, 1);
-        font-size: 4vmax;
+        font-size: 4vh;
     }
 
     100% {
