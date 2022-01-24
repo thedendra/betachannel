@@ -6,7 +6,7 @@
     --bcolor: rgb(41, 41, 41);
     --dcolor: rgba(153, 205, 50, 0.438);
 
-	--nav-height: 6vmin;
+	--nav-height: 6vh;
 	--par-fsz: 1vmax;
 	--hea-fsz: 1.5vmax;
 
@@ -96,6 +96,10 @@ html #globalbar{
 
 .lli{
     display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
     padding-left: 1vmin;
     padding-right: 1vmin;
     
@@ -104,7 +108,7 @@ html #globalbar{
     transition: color .2s;
     transition: font-size .2s, color .2s;
     text-align: center;
-
+    width: 5vmin;
     line-height: (var(--nav-height) - 1vmin);
     height: (var(--nav-height) - 1vmin);
     font-size: 1.7vmin;
@@ -168,11 +172,12 @@ html #globalbar{
 .mainfoot {
     position: relative;
     display: flex;
+    justify-content: center;
     background-color: rgba(0, 0, 0, 0.8);
     backdrop-filter: saturate(180%) blur(20px);
     width: 100%;
     
-    height: 50vh;
+    
     margin: 0;
     
     padding: 0;
@@ -183,20 +188,74 @@ html #globalbar{
 }
 
 .mainfoot > ul {
-    list-style: none;
+    list-style-type: none;
     display: inline-block;
+    padding: 0px
 }
 
-.mainfoot > ul > li > a > img {
-    height: 40px;
+.footlinks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.footlinks > a {
+    padding: 1vw
+}
+
+.footlinks > a > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6vh;
+    width: 6vh;
+    overflow: hidden;
+}
+
+.footlinks > a > div > img {
+    height: 4vh;
+    filter: grayscale(100%) invert(30%);
+    transition: all .2s;
+}
+
+.footlinks > a > div > img:hover {
+    height: 4.5vh;
+    filter: grayscale(100%) invert(100%);
+
+}
+
+.foottext {
+    text-align: center;
+}
+
+.foottext > h2 {
+    font-size: 2.7vmin;
+    color: var(--dcolor);
+}
+
+.foottext > p {
+    font-size: 2vmin;
+    color: rgba(245, 245, 245, 0.5);
+}
+
+.footdiscl {
+    text-align: center;
+    margin-top: 15vh;
+}
+
+.footdiscl > p {
+    font-size: 3vmin;
+    color: rgba(245, 245, 245, 0.5);
     
 }
 
 .maincon {
     position: relative;
-    top: var(--nav-height);
+    padding-top: 6vh;
+    top: 0vh;
     bottom: 5vmin;
-    
+    background-color: black;
     display: flex;
     flex-direction: column;
     
@@ -307,30 +366,35 @@ html #globalbar{
 .perfect {
     background-image: url("assets\\leather.jpg");
     background-size: cover;
+    background-position: center;
     background-attachment: fixed;
 }
 
 .ecolo {
     background-image: url("assets\\waterfall.jpg");
     background-size: cover;
+    background-position: center;
     background-attachment: fixed;
 }
 
 .respons {
     background-image: url("assets\\house.jpg");
     background-size: cover;
+    background-position: center;
     background-attachment: fixed;
 }
 
 .stabil {
     background-image: url("assets\\server.jpg");
     background-size: cover;
+    background-position: center;
     background-attachment: fixed;
 }
 
 .secur {
     background-image: url("assets\\bluetux_right.jpg");
     background-size: cover;
+    background-position: center;
     background-attachment: fixed;
 }
 
@@ -405,6 +469,13 @@ html #globalbar{
         
         font-size: 2.5vmax;
     }
+
+    .footlinks > a > div > img:hover {
+        height: 4vh;
+        filter: invert(30%);
+    }
+
+    
     
 }
 

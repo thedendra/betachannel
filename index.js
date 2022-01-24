@@ -83,7 +83,7 @@ function mobmenutxtpad(Fsize)
 
 function cenpar()
 {
-    document.getElementById("maincon").style.top = '5vh';
+    document.getElementById("maincon").style.paddingTop = '5vh';
     var toCenr = document.querySelectorAll(".mottor");
     var toCenl = document.querySelectorAll(".mottol");
     var noAnim = document.querySelectorAll(".mottopar");
@@ -118,7 +118,7 @@ function cenpar()
 
 function setpar()
 {
-    document.getElementById("maincon").style.top = '6vmin';
+    document.getElementById("maincon").style.paddingTop = '6vh';
     var toSet = document.querySelectorAll(".mottocen");
     var toAnim = document.querySelectorAll(".provv");
     var toMagn = document.querySelectorAll(".mottoconst");
