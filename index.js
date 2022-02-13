@@ -118,7 +118,7 @@ function cenpar()
 
 function setpar()
 {
-    document.getElementById("maincon").style.paddingTop = '6vh';
+    //document.getElementById("maincon").style.paddingTop = '6vh';
     var toSet = document.querySelectorAll(".mottocen");
     var toAnim = document.querySelectorAll(".provv");
     var toMagn = document.querySelectorAll(".mottoconst");
